@@ -14,4 +14,4 @@ conda env create -f environment.yml
 ````
 
 ### Running the program
-This program has several function:
+The program will be run with via Command-Line instructions; it has 4 functionalities that can be investigated with the wide commonly used `--help` command:
