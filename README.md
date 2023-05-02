@@ -1,7 +1,7 @@
 # Bacterial Growth Curves Database
 This project is the basis of a database set up for human gut bacterial growth curves and all the information regarding the obtainance of this data. Hence, it has two main functionalities for the user:
-* Populate the database with new experiments, providing information about the procedure and files with the final data
-* Extract information from the database by means of a Python Command-Line Program; information will be return both in a README.txt file and in plots, depending on the user choices when running the progam.
+* **Populate the database** with new experiments, providing information about the procedure and files with the final data
+* **Extract information from the database** by means of a Python Command-Line Program; information will be return both in a README.txt file and in plots, depending on the user choices when running the progam.
 
 ## Previous requirements
 * [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html): 
