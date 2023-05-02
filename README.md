@@ -55,5 +55,6 @@ First, this argument can be followed by two optional arguments, `--bacteria` and
 `python3 main.py getResultsFile --bacteria Bacteroides thetaiotaomicron`
 * `--metabolites`. This command can be kept empty, meaning that all the studies in which metabolites were measured will be returned, or be followed by a comma separated list of metabolites. The program will return all the studies that have been done with that (combination of) metabolites(s). For example:
 `python3 main.py getResultsFile --metabolites Glucose, Fructose`
+
 This two optional arguments can be passed together:
 `python3 main.py getResultsFile --metabolites Glucose --bacteria Bacteroides thetaiotaomicron`
