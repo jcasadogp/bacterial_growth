@@ -15,3 +15,13 @@ conda env create -f environment.yml
 
 ### Running the program
 The program will be run with via Command-Line instructions; it has 4 functionalities that can be investigated with the wide commonly used `--help` command:
+```
+python3 main.py --help
+```
+We will then obtain the 4 possible positional arguments that the code is receiving:
+```
+createInfoFile      Create the YML that the user will fill in to put data into the database
+populateDB          Pass the YML file to create the database
+getResultsFile      Pass the YML file to create the database
+plot                Plot data that is in the database
+```
