@@ -71,9 +71,9 @@ Option: __
 Once the user has picked up one option, the program will display tables with the existing studies, biological replicates and perturbations for the user to choose what to plot.
 
 - Option 1:
-<img src="https://user-images.githubusercontent.com/80517901/235652313-b20ce96a-824c-4289-be76-6c38a58e0dc2.png" width="48">
+<img src="https://user-images.githubusercontent.com/80517901/235652313-b20ce96a-824c-4289-be76-6c38a58e0dc2.png" width="100">
 - Option 2:
-<img src="https://user-images.githubusercontent.com/80517901/235652359-5bec7390-58ba-48d3-9e51-16c72cc33502.png" width="48">
+<img src="https://user-images.githubusercontent.com/80517901/235652359-5bec7390-58ba-48d3-9e51-16c72cc33502.png" width="100">
 - Option 3:
-<img src="https://user-images.githubusercontent.com/80517901/235652402-eaa5c2c6-c3c5-4b6a-aac7-30f036611652.png" width="48">
+<img src="https://user-images.githubusercontent.com/80517901/235652402-eaa5c2c6-c3c5-4b6a-aac7-30f036611652.png" width="100">
 
