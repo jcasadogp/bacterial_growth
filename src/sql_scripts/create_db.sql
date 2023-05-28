@@ -22,19 +22,24 @@ CREATE TABLE IF NOT EXISTS Reactor (
     volume FLOAT(7,2) DEFAULT 0,
     atmosphere FLOAT(7,2) DEFAULT 0,
     stirring_speed FLOAT(7,2) DEFAULT 0,
+    stirring_mode VARCHAR(50) DEFAULT '', #linear motion, orbital, etc
     reactorMode VARCHAR(50) DEFAULT '', #chemostat, batch, fed-batch,
     reactorDescription TEXT,
     PRIMARY KEY (reactorId),
     UNIQUE (reactorName, volume, atmosphere, stirring_speed, reactorMode)
 );
 
-CREATE TABLE IF NOT EXISTS Bacteria (
-	bacteriaId INT AUTO_INCREMENT,
-    bacteriaGenus VARCHAR(100) DEFAULT NULL,
-	bacteriaSpecies VARCHAR(100),
-	bacteriaStrain VARCHAR(100),
-    PRIMARY KEY (bacteriaId),
-    UNIQUE (bacteriaSpecies, bacteriaStrain)
+CREATE TABLE IF NOT EXISTS Taxon (
+	taxonId INT AUTO_INCREMENT,
+    phylum VARCHAR(100) DEFAULT NULL,
+    class VARCHAR(100) DEFAULT NULL,
+    order_txn VARCHAR(100) DEFAULT NULL,
+    family VARCHAR(100) DEFAULT NULL,
+    genus VARCHAR(100) DEFAULT NULL,
+	species VARCHAR(100),
+	strain VARCHAR(100),
+    PRIMARY KEY (taxonId),
+    UNIQUE (species, strain)
 );
 
 CREATE TABLE IF NOT EXISTS Media (
@@ -59,7 +64,7 @@ CREATE TABLE IF NOT EXISTS BiologicalReplicate (
 	inoculumVolume FLOAT(7,2) DEFAULT 0,
     initialPh FLOAT(7,2) DEFAULT NULL,
     initialTemperature FLOAT(7,2) DEFAULT NULL,
-    carbonSource BOOLEAN DEFAULT FALSE,
+    carbonSource VARCHAR(100) DEFAULT NULL,
     antibiotic VARCHAR(100) DEFAULT NULL,
     biologicalReplicateDescription TEXT,
     PRIMARY KEY (biologicalReplicateId),
@@ -97,9 +102,9 @@ CREATE TABLE IF NOT EXISTS TechnicalReplicate (
 );
 
 CREATE TABLE IF NOT EXISTS BacteriaCommunity (
-    bacteriaId INT,
+    taxonId INT,
     biologicalReplicateId INT,
-    PRIMARY KEY (bacteriaId, biologicalReplicateId),
-    FOREIGN KEY (bacteriaId) REFERENCES Bacteria (bacteriaId) ON UPDATE CASCADE ON DELETE CASCADE,
+    PRIMARY KEY (taxonId, biologicalReplicateId),
+    FOREIGN KEY (taxonId) REFERENCES Taxon (taxonId) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (biologicalReplicateId) REFERENCES BiologicalReplicate (biologicalReplicateId) ON UPDATE CASCADE ON DELETE CASCADE
 );
