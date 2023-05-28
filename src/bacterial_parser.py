@@ -31,7 +31,7 @@ def bacterial_parser():
     )
 
     # create the parser for the "populateDB" command
-    subparser3 = subparsers.add_parser('getResultsFile', help='Pass the YML file to create the database')
+    subparser3 = subparsers.add_parser('getResultsFile', help='Receive data extracted from the database')
     subparser3.add_argument(
         '-b', '--bacteria', dest='bacteria', required=False, type=str, nargs='*', help="List of bacteria to look for biological replicates containing them"
     )
