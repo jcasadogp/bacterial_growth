@@ -13,19 +13,19 @@ def create_yml_file(args):
     yml_files_dir = LOCAL_DIRECTORY+'yml_files/'
     modifyYml = PROJECT_DIRECTORY + MODIFY_YML_FILE
 
-    num_studies = args.num_studies
+    new_study = args.new_study
     num_biological_replicates = args.num_biological_replicates
     num_perturbations = args.num_perturbations
 
-    if num_studies == None: num_studies = 0
+    if new_study == None: new_study = 0
     if num_biological_replicates == None: num_biological_replicates = 0
     if num_perturbations == None: num_perturbations = 0
 
-    if num_studies > 1:
+    if new_study > 1:
         print('\n\tERROR: You can only introduce one study at a time\n')
         exit()
     
-    if num_studies == 1:
+    if new_study == 1:
         if num_biological_replicates == 0 and num_perturbations > 0:
             print('\n\tERROR: You introduced NON-VALID parameters\n\tIf you want to introduce perturbations in a new study, you should also introduce the biological replicate info. \n\tIf you want to introduce perturbations into an existing biological replicate, and hence, into an existing study, you should only take the -p/--num_perturbations flag. \n\tIf you want to create a new biological replicate, you should also take the -e/--num_biological_replicates flag\n')
         else:

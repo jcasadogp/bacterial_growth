@@ -13,7 +13,7 @@ def bacterial_parser():
     # create the parser for the "createInfoFile" command
     subparser1 = subparsers.add_parser('createInfoFile', help='Create the YML that the user will fill in to put data into the database')
     subparser1.add_argument(
-        '-s', '--num_studies', dest='num_studies', required=False, type=int, help="Number of new studies to introduce in the DB"
+        '-s', '--new_study', dest='new_study', required=False, type=int, help="Number of new studies to introduce in the DB"
     )
     
     subparser1.add_argument(
